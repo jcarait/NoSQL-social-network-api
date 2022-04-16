@@ -94,6 +94,26 @@ const emails = [
   "leila.krajcik62@gmail.com",
   "maymie83@yahoo.com",
   "candace_yost@yahoo.com",
+  "stomv@att.net",
+  "portele@yahoo.com",
+  "shang@optonline.net",
+  "arnold@optonline.net",
+  "scarlet@aol.com",
+  "atmarks@gmail.com",
+  "arathi@optonline.net",
+  "kassiesa@icloud.com",
+  "philb@gmail.com",
+  "gavollink@me.com",
+  "boein@yahoo.com",
+  "tubesteak@outlook.com",
+  "monopole@gmail.com",
+  "shang@yahoo.com",
+  "jonadab@mac.com",
+  "ghost@me.com",
+  "phizntrg@sbcglobal.net",
+  "mhassel@live.com",
+  "subir@hotmail.com",
+  "parasite@att.net"
 ];
 
 const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
