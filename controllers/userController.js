@@ -32,7 +32,7 @@ module.exports = {
   // update a user
   updateUser({ params, body }, res) {
     User.findOneAndUpdate(
-      { _id: params.id },
+      { _id: params.userId },
       body,
       { runValidators: true, new: true }
     )
