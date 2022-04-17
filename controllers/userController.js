@@ -13,7 +13,7 @@ module.exports = {
       .select('-__v')
       .then(async (user) =>
         !user
-          ? res.status(404).json({ message: 'No student with that ID' })
+          ? res.status(404).json({ message: 'No user with that ID' })
           : res.json({
             user,
           })
