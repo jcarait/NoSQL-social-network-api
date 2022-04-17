@@ -123,7 +123,7 @@ console.log(genRandomIndex(usernames));
 const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const getRandomUserName = () =>
-  `${getRandomArrItem(usernames)}`;
+  `${getRandomArrItem(usernames)}${getRandomArrItem(usernames)}`;
 
 const getRandomEmail = () =>
   `${getRandomArrItem(emails)}`;

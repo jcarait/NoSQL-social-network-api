@@ -17,12 +17,14 @@ const userSchema = new Schema(
     }
   },
   {
-    toJSON:{
-      getters: true,
-    }
-  }
+    toJSON: {
+        virtuals: true,
+        getters: true
+    },
+    id: false
+}
 );
 
-  const User = model('user', userSchema);
+  const User = model('User', userSchema);
 
   module.exports = User;

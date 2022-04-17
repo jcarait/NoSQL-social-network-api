@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const { User } = require('../models');
 
 module.exports = {
   //Get all users
@@ -30,10 +30,10 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
   // update a user
-  updateUser(req, res) {
+  updateUser({ params, body }, res) {
     User.findOneAndUpdate(
-      { _id: req.params.userId },
-      { $set: req.body },
+      { _id: params.id },
+      body,
       { runValidators: true, new: true }
     )
       .then((user) =>
@@ -41,7 +41,10 @@ module.exports = {
           ? res.status(404).json({ message: 'No user with this id!' }) 
           : res.json(user)
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => { 
+        res.status(500).json(err)
+        console.log(err)
+      });
   },
   // delete a user
   deleteUser(req, res) {
